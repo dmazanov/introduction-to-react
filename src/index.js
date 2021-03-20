@@ -5,8 +5,21 @@ import {categories} from "./fixtures";
 function App() {
     console.log("categories", categories);
     return <Fragment>
-        <Category category={categories[0]} name="test" title="test2" />
+        <CategoriesList categories = {categories} />
     </Fragment>
+}
+
+function CategoriesList(props){
+    const {categories} = props;
+    return (
+        <ul>
+            {categories.map((item) => {
+                return (
+                    <li key={item.id}><Category category={item} /></li>
+                )
+            })}
+        </ul>
+    )
 }
 
 function Category(props) {
@@ -21,10 +34,14 @@ function Category(props) {
         {category.name ? (
             <h1>{category.name}</h1>
         ) : null}
-        {isOpen && category.description ? (
-            <p>{category.description}</p>
+        {category.description ? (
+            <>
+                {isOpen ? (
+                    <p dangerouslySetInnerHTML= {{__html: category.description}} />
+                ) : null}
+                <button type="button" onClick={handleClick}>toggle description</button>
+            </>
         ) : null}
-        <button type="button" onClick={handleClick}>toggle description</button>
     </div>
 }
 
