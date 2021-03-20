@@ -1,4 +1,4 @@
-import React, {Fragment} from "react"
+import React, {Fragment, useState} from "react"
 import ReactDOM from "react-dom"
 import {categories} from "./fixtures";
 
@@ -11,14 +11,20 @@ function App() {
 
 function Category(props) {
     const { category } = props;
-    console.log("category", category);
+    const [isOpen, toggleOpen] = useState(false);
+    const handleClick = () =>
+    {
+        toggleOpen(!isOpen);
+    }
+    console.log("isOpen ", isOpen)
     return <div>
         {category.name ? (
             <h1>{category.name}</h1>
         ) : null}
-        {category.description ? (
+        {isOpen && category.description ? (
             <p>{category.description}</p>
         ) : null}
+        <button type="button" onClick={handleClick}>toggle description</button>
     </div>
 }
 

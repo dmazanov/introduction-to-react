@@ -43,7 +43,7 @@ const categories = [
         "children_count": "0",
         "created_at": "2020-02-02 16:58:24",
         "default_sort_by": null,
-        "description": null,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non venenatis risus. Etiam eget lectus ac diam posuere cursus. Fusce interdum luctus dolor ac tempus. Sed et ex et lectus dignissim eleifend in nec leo. Sed vestibulum sit amet quam id fermentum. In commodo tellus vel egestas maximus. Sed sed enim vehicula, volutpat nunc a, efficitur nisi. Nunc iaculis, elit id maximus rutrum, augue felis tempus neque, in maximus sapien odio quis nunc. Ut odio dolor, varius ac urna dictum, sodales sollicitudin odio. Nam sed nunc a erat pharetra egestas. Pellentesque sit amet lectus a velit cursus tincidunt eu eget odio.",
         "display_mode": "PRODUCTS",
         "filter_price_range": null,
         "id": 6,
